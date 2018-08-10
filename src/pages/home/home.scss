@@ -1,3 +1,40 @@
 page-home {
+   
+        .home{
+            background-image: url('../assets/imgs/cam_icon.png');
+            background-repeat: no-repeat;
+            background-position:center;
+            background-size: 20cm;
 
+            .block {
+                position: relative;
+                .deleteIcon {
+                  position: absolute !important;
+                  color: #ffffff !important;
+                  margin-left: 80% !important;
+                }
+                .deleteIcon:before {
+                  font-size: 30px !important;
+                }
+          }    
+}
+ .gal-btn{
+    background:#E5618F;
+    border-radius: 30px !important;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+ }
+ .flash-btn{
+    background:#E5618F;
+    border-radius: 30px !important;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+ }
+ .photo-btn{
+    
+ background:#E5618F;
+        border-radius: 30px !important;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+ }
 }

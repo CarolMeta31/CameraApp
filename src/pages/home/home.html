@@ -1,14 +1,31 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="pink">
     <ion-title>
-      Ionic Blank
+      cam app 
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="home" padding>
+  <button ion-button class="photo-btn" full (click)="takePhoto()" >
+    <ion-icon name="camera"></ion-icon> Take Photo
+    </button>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6 *ngFor="let photo of photos; let id = index">
+          <ion-card class="block">
+          <ion-icon  name="trash" class="deleteIcon" (click)="deletePhoto(id)"></ion-icon>
+          <!-- <img src="./assets/imgs/bbuilding.jpg" /> -->
+          <img [src]="photo" *ngIf="photo" />
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-fab top left>
+
+<button ion-fab mini class="flash-btn" (tap)="toggleMethod()"><ion-icon   name="flash" ></ion-icon></button>
+</ion-fab>
+      <button ion-button class="gal-btn" color="primary" full (click)="accessGallery()"> <ion-icon name="photos"></ion-icon> Open Gallery</button>
 </ion-content>
